@@ -19,8 +19,8 @@ A pasta `_site/` é o website estático, pronto para qualquer hospedagem.
 
 ## GitHub Pages
 
-O workflow em `.github/workflows/pages.yml` constrói o site e publica-o em
-`https://fabioaraujopt.github.io/tascas/` a partir do ramo `main`.
+O site está em `https://fabioaraujopt.github.io/tascas/`, publicado a partir
+do ramo `gh-pages`.
 
 ## Acrescentar tascas
 
