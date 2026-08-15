@@ -1,12 +1,12 @@
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="wordmark" href="/" aria-label="{{ site.name }}, página inicial">
+    <a class="wordmark" href="{{ '/' | url }}" aria-label="{{ site.name }}, página inicial">
       {{ site.name }}
     </a>
     <nav class="nav" aria-label="Secções">
-      <a href="/tascas/" {% if page.url.startsWith("/tascas/") %}aria-current="page"{% endif %}>Tascas</a>
-      <a href="/cidades/" {% if page.url.startsWith("/cidades/") %}aria-current="page"{% endif %}>Cidades</a>
-      <a href="/sobre/" {% if page.url === "/sobre/" %}aria-current="page"{% endif %}>O que é</a>
+      <a href="{{ '/tascas/' | url }}" {% if page.url.startsWith("/tascas/") %}aria-current="page"{% endif %}>Tascas</a>
+      <a href="{{ '/cidades/' | url }}" {% if page.url.startsWith("/cidades/") %}aria-current="page"{% endif %}>Cidades</a>
+      <a href="{{ '/sobre/' | url }}" {% if page.url === "/sobre/" %}aria-current="page"{% endif %}>O que é</a>
     </nav>
   </div>
 </header>

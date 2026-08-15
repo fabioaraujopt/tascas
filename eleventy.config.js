@@ -37,7 +37,7 @@ const RESERVATION_LABELS = {
 export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/assets": "assets",
-    "src/robots.txt": "robots.txt",
+    "src/.nojekyll": ".nojekyll",
   });
 
   eleventyConfig.addFilter("tascasByCity", (list, citySlug) =>
@@ -165,7 +165,10 @@ export default async function (eleventyConfig) {
     showAllHosts: true,
   });
 
+  const pathPrefix = normalizePathPrefix(process.env.PATH_PREFIX);
+
   return {
+    pathPrefix,
     dir: {
       input: "src",
       output: "_site",
@@ -176,4 +179,9 @@ export default async function (eleventyConfig) {
     htmlTemplateEngine: "njk",
     templateFormats: ["njk", "md", "html"],
   };
+}
+
+function normalizePathPrefix(value) {
+  if (!value || value === "/") return "/";
+  return `/${value.replace(/^\/|\/$/g, "")}/`;
 }

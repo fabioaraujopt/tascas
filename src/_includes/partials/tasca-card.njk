@@ -1,5 +1,5 @@
 <article class="tasca-row" data-name="{{ tasca.name }}" data-city="{{ tasca.citySlug }}" data-neighborhood="{{ tasca.neighborhood }}" data-price="{{ tasca.price }}" data-tags="{{ tasca.tags | join(' ') }}">
-  <a class="tasca-row-link" href="/tascas/{{ tasca.slug }}/">
+  <a class="tasca-row-link" href="{{ ('/tascas/' + tasca.slug + '/') | url }}">
     <div class="tasca-row-top">
       <h3 class="tasca-name">{{ tasca.name }}</h3>
       <p class="tasca-meta">
