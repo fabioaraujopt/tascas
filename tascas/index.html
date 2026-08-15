@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todas as tascas · Tascas</title>
+    <meta name="description" content="Directório de tascas portuguesas — Lisboa, Porto, Coimbra, Almada. Filtra por cidade, preço ou o que quiseres comer.">
+    <meta name="author" content="Tascas">
+    <link rel="canonical" href="https://fabioaraujopt.github.io/tascas/tascas/">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Todas as tascas · Tascas">
+    <meta property="og:description" content="Directório de tascas portuguesas — Lisboa, Porto, Coimbra, Almada. Filtra por cidade, preço ou o que quiseres comer.">
+    <meta property="og:url" content="https://fabioaraujopt.github.io/tascas/tascas/">
+    <meta property="og:site_name" content="Tascas">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="/tascas/assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/tascas/assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,ital,wght@8..60,0,400;8..60,0,600;8..60,0,700;8..60,1,400&display=swap">
+    <link rel="stylesheet" href="/tascas/assets/css/main.css">
+    
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+    <header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="/tascas/" aria-label="Tascas, página inicial">
+      Tascas
+    </a>
+    <nav class="nav" aria-label="Secções">
+      <a href="/tascas/tascas/" aria-current="page">Tascas</a>
+      <a href="/tascas/cidades/" >Cidades</a>
+      <a href="/tascas/sobre/" >O que é</a>
+    </nav>
+  </div>
+</header>
+
+    <main id="conteudo">
+      
+<section class="page-head wrap">
+  <p class="kicker">Directório</p>
+  <h1>As tascas</h1>
+  <p class="lead">
+    27 casas. Sem fotografia de prato, sem botão a reservar.
+    Nome, bairro, o que pedir, se há fila.
+  </p>
+</section>
+
+<div class="wrap filters" data-filter-root>
+  <form class="filter-bar" role="search" aria-label="Filtrar tascas">
+    <p class="filter-count" data-filter-count>27 casas</p>
+    <label class="sr-only" for="q">Pesquisar por nome ou bairro</label>
+    <input id="q" name="q" type="search" placeholder="Nome, bairro, prato…" autocomplete="off" data-filter-q>
+
+    <label class="sr-only" for="cidade">Cidade</label>
+    <select id="cidade" name="cidade" data-filter-city>
+      <option value="">Todas as cidades</option>
+      
+        <option value="almada">Almada</option>
+      
+        <option value="coimbra">Coimbra</option>
+      
+        <option value="lisboa">Lisboa</option>
+      
+        <option value="porto">Porto</option>
+      
+    </select>
+
+    <label class="sr-only" for="preco">Preço</label>
+    <select id="preco" name="preco" data-filter-price>
+      <option value="">Qualquer preço</option>
+      <option value="€">€</option>
+      <option value="€€">€€</option>
+      <option value="€€€">€€€</option>
+    </select>
+
+    <button type="reset" class="reset" data-filter-reset>Limpar</button>
+  </form>
+
+  <p class="empty-state" hidden data-filter-empty>Nenhuma tasca corresponde a isto. Limpa os filtros ou pesquisa outra coisa.</p>
+
+  <div class="tasca-list" data-filter-list>
+    
+      <article class="tasca-row" data-name="A Rampa do Pragal" data-city="almada" data-neighborhood="Pragal" data-price="€€" data-tags="almoco peixe grelhados doses-grandes fila so-almoco">
+  <a class="tasca-row-link" href="/tascas/tascas/rampa-do-pragal/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">A Rampa do Pragal</h3>
+      <p class="tasca-meta">
+        <span>Pragal</span>
+        <span aria-hidden="true">·</span>
+        <span>Almada</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">A casa de peixe grelhado do Pragal. Travessas a circular, fila ao almoço, ninguém sai com fome.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Cervejaria Vianense" data-city="almada" data-neighborhood="Cova da Piedade" data-price="€€" data-tags="almoco jantar cervejaria peixe grelhados">
+  <a class="tasca-row-link" href="/tascas/tascas/cervejaria-vianense/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Cervejaria Vianense</h3>
+      <p class="tasca-meta">
+        <span>Cova da Piedade</span>
+        <span aria-hidden="true">·</span>
+        <span>Almada</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Cervejaria da Cova da Piedade. Peixe no carvão, caracóis, bife. O mapa chama-lhe A Vianense.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Gerardos" data-city="almada" data-neighborhood="Pragal" data-price="€€" data-tags="almoco jantar cervejaria prato-do-dia familiar">
+  <a class="tasca-row-link" href="/tascas/tascas/gerardos/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Gerardos</h3>
+      <p class="tasca-meta">
+        <span>Pragal</span>
+        <span aria-hidden="true">·</span>
+        <span>Almada</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Cervejaria de rotina no Pragal. Abre às oito, fecha à meia-noite, cozinha portuguesa o dia inteiro.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Zé Manel dos Ossos" data-city="coimbra" data-neighborhood="Baixa" data-price="€€" data-tags="almoco jantar fila familiar ossos">
+  <a class="tasca-row-link" href="/tascas/tascas/ze-manel-dos-ossos/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Zé Manel dos Ossos</h3>
+      <p class="tasca-meta">
+        <span>Baixa</span>
+        <span aria-hidden="true">·</span>
+        <span>Coimbra</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">A tasca de Coimbra. Sala minúscula, paredes escritas pelos clientes, fila no beco. Sem marcações.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Cantinho do Alfredo" data-city="lisboa" data-neighborhood="Campolide" data-price="€" data-tags="almoco cozido prato-do-dia familiar">
+  <a class="tasca-row-link" href="/tascas/tascas/cantinho-do-alfredo/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Cantinho do Alfredo</h3>
+      <p class="tasca-meta">
+        <span>Campolide</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Campolide, almoço, cozido à quinta. Uma casa de bairro que não precisa do centro.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Casa dos Passarinhos" data-city="lisboa" data-neighborhood="Campo de Ourique" data-price="€€" data-tags="almoco jantar familiar classica">
+  <a class="tasca-row-link" href="/tascas/tascas/casa-dos-passarinhos/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Casa dos Passarinhos</h3>
+      <p class="tasca-meta">
+        <span>Campo de Ourique</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Desde 1923 em Campo de Ourique. O bife na pedra é o que a casa sabe que as pessoas vêm buscar.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Das Flores" data-city="lisboa" data-neighborhood="Chiado" data-price="€" data-tags="almoco prato-do-dia familiar">
+  <a class="tasca-row-link" href="/tascas/tascas/das-flores/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Das Flores</h3>
+      <p class="tasca-meta">
+        <span>Chiado</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">A outra casa da Rua das Flores. Família Fernandes, 1976, almoço de bairro no Chiado.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Faz Frio" data-city="lisboa" data-neighborhood="Príncipe Real" data-price="€€" data-tags="almoco jantar classica familiar">
+  <a class="tasca-row-link" href="/tascas/tascas/faz-frio/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Faz Frio</h3>
+      <p class="tasca-meta">
+        <span>Príncipe Real</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Casa de 1942 na Rua Dom Pedro V. Há uma porta atrás com história; à frente serve-se comida de forno.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Imperial de Campo de Ourique" data-city="lisboa" data-neighborhood="Campo de Ourique" data-price="€" data-tags="almoco jantar prato-do-dia familiar">
+  <a class="tasca-row-link" href="/tascas/tascas/imperial-de-campo-de-ourique/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Imperial de Campo de Ourique</h3>
+      <p class="tasca-meta">
+        <span>Campo de Ourique</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Tasca de bairro no sentido literal: vizinhos, quadro, preço de almoço.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="O Velho Eurico" data-city="lisboa" data-neighborhood="Mouraria" data-price="€€" data-tags="jantar contemporanea marcacao">
+  <a class="tasca-row-link" href="/tascas/tascas/o-velho-eurico/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">O Velho Eurico</h3>
+      <p class="tasca-meta">
+        <span>Mouraria</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Era uma tasca velha. Continuou a sê-lo, com um cozinheiro que leva a coisa a sério.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Taberna da Rua das Flores" data-city="lisboa" data-neighborhood="Chiado" data-price="€€" data-tags="almoco jantar contemporanea fila vinho">
+  <a class="tasca-row-link" href="/tascas/tascas/taberna-da-rua-das-flores/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Taberna da Rua das Flores</h3>
+      <p class="tasca-meta">
+        <span>Chiado</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Não há marcações. Há uma fila, uma carta de vinhos a sério, e petiscos que mudam todos os dias.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Taberna do Sal Grosso" data-city="lisboa" data-neighborhood="Santa Apolónia" data-price="€€" data-tags="jantar contemporanea marcacao petiscos">
+  <a class="tasca-row-link" href="/tascas/tascas/taberna-do-sal-grosso/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Taberna do Sal Grosso</h3>
+      <p class="tasca-meta">
+        <span>Santa Apolónia</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Vinte e tal lugares, balcão de zinco, produto tratado sem cerimónia. Marcar.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Tasca do Abel" data-city="lisboa" data-neighborhood="Mouraria" data-price="€" data-tags="almoco prato-do-dia familiar">
+  <a class="tasca-row-link" href="/tascas/tascas/tasca-do-abel/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Tasca do Abel</h3>
+      <p class="tasca-meta">
+        <span>Mouraria</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Trinta anos a servir o bairro. O quadro muda todos os dias; o preço quase não.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Tasca do Chico" data-city="lisboa" data-neighborhood="Bairro Alto" data-price="€" data-tags="jantar fado petiscos bifanas">
+  <a class="tasca-row-link" href="/tascas/tascas/tasca-do-chico/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Tasca do Chico</h3>
+      <p class="tasca-meta">
+        <span>Bairro Alto</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Bifanas, fino, e fado vadio quando calha. Não é casa de espectáculo. É uma tasca com guitarra.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Tascardoso" data-city="lisboa" data-neighborhood="Príncipe Real" data-price="€" data-tags="almoco prato-do-dia familiar">
+  <a class="tasca-row-link" href="/tascas/tascas/tascardoso/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Tascardoso</h3>
+      <p class="tasca-meta">
+        <span>Príncipe Real</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Uma das últimas tascas clássicas no Príncipe Real, antes da rua virar loja.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Varina da Madragoa" data-city="lisboa" data-neighborhood="Madragoa" data-price="€€" data-tags="jantar classica peixe loja-com-historia">
+  <a class="tasca-row-link" href="/tascas/tascas/varina-da-madragoa/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Varina da Madragoa</h3>
+      <p class="tasca-meta">
+        <span>Madragoa</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Taberna da Madragoa com décadas de deputados e escritores à mesa. Reabriu em 2026.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Zé da Mouraria" data-city="lisboa" data-neighborhood="Mouraria" data-price="€€" data-tags="almoco doses-grandes familiar fila so-almoco">
+  <a class="tasca-row-link" href="/tascas/tascas/ze-da-mouraria/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Zé da Mouraria</h3>
+      <p class="tasca-meta">
+        <span>Mouraria</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">A casa que ainda explica o que é uma tasca lisboeta. Doses para a mesa, fila à porta, almoço só.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Zé dos Cornos" data-city="lisboa" data-neighborhood="Mouraria" data-price="€" data-tags="almoco grelhados familiar fila">
+  <a class="tasca-row-link" href="/tascas/tascas/ze-dos-cornos/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Zé dos Cornos</h3>
+      <p class="tasca-meta">
+        <span>Mouraria</span>
+        <span aria-hidden="true">·</span>
+        <span>Lisboa</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Grelhador no centro da sala, família ao balcão, carne com fumo. A Mouraria no seu estado normal.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Adega Alfredo Portista" data-city="porto" data-neighborhood="Baixa" data-price="€" data-tags="almoco petiscos familiar">
+  <a class="tasca-row-link" href="/tascas/tascas/adega-alfredo-portista/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Adega Alfredo Portista</h3>
+      <p class="tasca-meta">
+        <span>Baixa</span>
+        <span aria-hidden="true">·</span>
+        <span>Porto</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Azulejo azul, fotografias do FC Porto, petiscos para qualquer clube. Perto de São Bento.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Adega São Nicolau" data-city="porto" data-neighborhood="Ribeira" data-price="€€" data-tags="almoco jantar peixe marcacao">
+  <a class="tasca-row-link" href="/tascas/tascas/adega-sao-nicolau/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Adega São Nicolau</h3>
+      <p class="tasca-meta">
+        <span>Ribeira</span>
+        <span aria-hidden="true">·</span>
+        <span>Porto</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">A irmã mais velha da Taberna dos Mercadores. Ribeira, produto do Norte, sala que enche.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Casa Guedes" data-city="porto" data-neighborhood="Marquês" data-price="€" data-tags="almoco sandes pernil balcao">
+  <a class="tasca-row-link" href="/tascas/tascas/casa-guedes/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Casa Guedes</h3>
+      <p class="tasca-meta">
+        <span>Marquês</span>
+        <span aria-hidden="true">·</span>
+        <span>Porto</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Pernil de Baião no pão, ao balcão. A casa original ainda é a que interessa.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Casa Louro" data-city="porto" data-neighborhood="Baixa" data-price="€" data-tags="almoco sandes presunto balcao">
+  <a class="tasca-row-link" href="/tascas/tascas/casa-louro/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Casa Louro</h3>
+      <p class="tasca-meta">
+        <span>Baixa</span>
+        <span aria-hidden="true">·</span>
+        <span>Porto</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Presuntos de Lamego no tecto. Uma sandes, uma malga de verde, e segue.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Conga" data-city="porto" data-neighborhood="Baixa" data-price="€" data-tags="almoco sandes bifanas balcao">
+  <a class="tasca-row-link" href="/tascas/tascas/conga/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Conga</h3>
+      <p class="tasca-meta">
+        <span>Baixa</span>
+        <span aria-hidden="true">·</span>
+        <span>Porto</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">A bifana do Porto, picante, no pão, com um fino. Desde 1976 na Rua do Bonjardim.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Escondidinho do Barredo" data-city="porto" data-neighborhood="Ribeira" data-price="€" data-tags="almoco petiscos familiar">
+  <a class="tasca-row-link" href="/tascas/tascas/escondidinho-do-barredo/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Escondidinho do Barredo</h3>
+      <p class="tasca-meta">
+        <span>Ribeira</span>
+        <span aria-hidden="true">·</span>
+        <span>Porto</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Uma tasca escondida na Ribeira que ainda não pôs fotografia na porta.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Gazela" data-city="porto" data-neighborhood="Baixa" data-price="€" data-tags="almoco sandes cachorrinhos balcao">
+  <a class="tasca-row-link" href="/tascas/tascas/gazela/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Gazela</h3>
+      <p class="tasca-meta">
+        <span>Baixa</span>
+        <span aria-hidden="true">·</span>
+        <span>Porto</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Um prato só: cachorrinho. Pão estaladiço, salsicha, queijo, molho picante.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Taberna dos Mercadores" data-city="porto" data-neighborhood="Ribeira" data-price="€€" data-tags="jantar peixe marcacao familiar">
+  <a class="tasca-row-link" href="/tascas/tascas/taberna-dos-mercadores/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Taberna dos Mercadores</h3>
+      <p class="tasca-meta">
+        <span>Ribeira</span>
+        <span aria-hidden="true">·</span>
+        <span>Porto</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Oito mesas na Ribeira. António Coelho traz o Norte para o prato. Sem marcação, não há mesa.</p>
+  </a>
+</article>
+
+    
+      <article class="tasca-row" data-name="Taberna Santo António" data-city="porto" data-neighborhood="Miragaia" data-price="€" data-tags="almoco jantar familiar prato-do-dia">
+  <a class="tasca-row-link" href="/tascas/tascas/taberna-santo-antonio/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">Taberna Santo António</h3>
+      <p class="tasca-meta">
+        <span>Miragaia</span>
+        <span aria-hidden="true">·</span>
+        <span>Porto</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">€</span>
+      </p>
+    </div>
+    <p class="tasca-summary">Prato do dia, vitela estufada, mousse que a cidade discute. A vista é extra; a cozinha chega.</p>
+  </a>
+</article>
+
+    
+  </div>
+</div>
+
+    </main>
+    <footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>
+      <strong>Tascas</strong> é um guia editorial de tascas portuguesas.
+      Horários e preços mudam — confirma na porta.
+    </p>
+    <p class="footer-meta">
+      27 casas no guia · Actualizado em 2026-08-15 · © 2026
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="/tascas/assets/js/filter.js" defer></script>
+    
+  </body>
+</html>
