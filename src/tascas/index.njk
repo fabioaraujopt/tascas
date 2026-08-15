@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+title: Todas as tascas
+description: Directório de tascas portuguesas — Lisboa, Porto, Coimbra, Almada. Filtra por cidade, preço ou o que quiseres comer.
+permalink: /tascas/
+extraJs: /assets/js/filter.js
+---
+
+<section class="page-head wrap">
+  <p class="kicker">Directório</p>
+  <h1>As tascas</h1>
+  <p class="lead">
+    {{ tascaCount }} casas. Sem fotografia de prato, sem botão a reservar.
+    Nome, bairro, o que pedir, se há fila.
+  </p>
+</section>
+
+<div class="wrap filters" data-filter-root>
+  <form class="filter-bar" role="search" aria-label="Filtrar tascas">
+    <p class="filter-count" data-filter-count>{{ tascaCount }} casas</p>
+    <label class="sr-only" for="q">Pesquisar por nome ou bairro</label>
+    <input id="q" name="q" type="search" placeholder="Nome, bairro, prato…" autocomplete="off" data-filter-q>
+
+    <label class="sr-only" for="cidade">Cidade</label>
+    <select id="cidade" name="cidade" data-filter-city>
+      <option value="">Todas as cidades</option>
+      {% for city in cities %}
+        <option value="{{ city.slug }}">{{ city.name }}</option>
+      {% endfor %}
+    </select>
+
+    <label class="sr-only" for="preco">Preço</label>
+    <select id="preco" name="preco" data-filter-price>
+      <option value="">Qualquer preço</option>
+      <option value="€">€</option>
+      <option value="€€">€€</option>
+      <option value="€€€">€€€</option>
+    </select>
+
+    <button type="reset" class="reset" data-filter-reset>Limpar</button>
+  </form>
+
+  <p class="empty-state" hidden data-filter-empty>Nenhuma tasca corresponde a isto. Limpa os filtros ou pesquisa outra coisa.</p>
+
+  <div class="tasca-list" data-filter-list>
+    {% for tasca in tascas | sortByCityThenName %}
+      {% include "partials/tasca-card.njk" %}
+    {% endfor %}
+  </div>
+</div>

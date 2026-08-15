@@ -1,0 +1,57 @@
+---
+layout: layouts/base.njk
+permalink: /
+---
+
+<section class="hero wrap">
+  <p class="kicker">Guia de tascas · Portugal</p>
+  <h1>Onde se come a sério.</h1>
+  <p class="lead">
+    Uma tasca não é um conceito. É uma sala pequena, um quadro com o prato do dia,
+    vinho da casa no copo e a conta no papel. Este guia trata dessas casas —
+    as que ainda cozinham para o bairro, não para o algoritmo.
+  </p>
+  <p class="hero-actions">
+    <a class="btn" href="/tascas/">Ver as {{ tascaCount }} tascas</a>
+    <a class="text-link" href="/sobre/">O que entra no guia</a>
+  </p>
+</section>
+
+<section class="wrap band" aria-labelledby="destaques">
+  <div class="section-head">
+    <h2 id="destaques">Para começar</h2>
+    <p>Casas que explicam o país melhor do que um menu degustação.</p>
+  </div>
+  <div class="tasca-list">
+    {% for tasca in tascas | featured %}
+      {% include "partials/tasca-card.njk" %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap band cities-band" aria-labelledby="cidades-home">
+  <div class="section-head">
+    <h2 id="cidades-home">Por cidade</h2>
+  </div>
+  <ul class="city-index">
+    {% for city in cities %}
+      <li>
+        <a href="/cidades/{{ city.slug }}/">
+          <span class="city-name">{{ city.name }}</span>
+          <span class="city-count">{{ city.count }} {{ "casa" if city.count == 1 else "casas" }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="wrap band manifesto" aria-labelledby="metodo">
+  <h2 id="metodo">Como se usa</h2>
+  <ol class="rules">
+    <li>Pede o prato do dia. É o que a casa comprou de manhã.</li>
+    <li>O vinho da casa chega. Se não chegar, pede um fino.</li>
+    <li>O couvert não é obrigatório. «Não, obrigado» resolve.</li>
+    <li>Horários neste guia são uma indicação. A porta é a fonte.</li>
+  </ol>
+  <p><a class="text-link" href="/sobre/">Ler o método completo</a></p>
+</section>

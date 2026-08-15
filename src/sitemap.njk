@@ -1,0 +1,35 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.updated }}</lastmod>
+  </url>
+  <url>
+    <loc>{{ site.url }}/tascas/</loc>
+    <lastmod>{{ site.updated }}</lastmod>
+  </url>
+  <url>
+    <loc>{{ site.url }}/cidades/</loc>
+    <lastmod>{{ site.updated }}</lastmod>
+  </url>
+  <url>
+    <loc>{{ site.url }}/sobre/</loc>
+    <lastmod>{{ site.updated }}</lastmod>
+  </url>
+  {% for city in cities %}
+  <url>
+    <loc>{{ site.url }}/cidades/{{ city.slug }}/</loc>
+    <lastmod>{{ site.updated }}</lastmod>
+  </url>
+  {% endfor %}
+  {% for tasca in tascas %}
+  <url>
+    <loc>{{ site.url }}/tascas/{{ tasca.slug }}/</loc>
+    <lastmod>{{ site.updated }}</lastmod>
+  </url>
+  {% endfor %}
+</urlset>

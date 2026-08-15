@@ -1,0 +1,27 @@
+---
+pagination:
+  data: cities
+  size: 1
+  alias: city
+permalink: /cidades/{{ city.slug }}/
+layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ city.name }}"
+  description: "Tascas em {{ city.name }} — {{ city.count }} casas no guia."
+---
+{% set list = tascas | tascasByCity(city.slug) | sortByName %}
+
+<section class="page-head wrap">
+  <p class="kicker"><a href="/cidades/">Cidades</a></p>
+  <h1>{{ city.name }}</h1>
+  <p class="lead">
+    {{ city.count }} {{ "casa" if city.count == 1 else "casas" }}.
+    Bairros: {{ city.neighborhoods | join(", ") }}.
+  </p>
+</section>
+
+<div class="wrap tasca-list">
+  {% for tasca in list %}
+    {% include "partials/tasca-card.njk" %}
+  {% endfor %}
+</div>

@@ -1,0 +1,19 @@
+{
+  "name": "tascas",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Guia estático de tascas portuguesas",
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve --port 8080",
+    "validate": "node scripts/validate-tascas.mjs",
+    "prebuild": "node scripts/validate-tascas.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

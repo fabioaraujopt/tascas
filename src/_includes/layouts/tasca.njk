@@ -1,0 +1,100 @@
+---
+layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ tasca.name }}"
+  description: "{{ tasca.summary }}"
+  ogType: article
+---
+{% set related = tascas | relatedTascas(tasca) %}
+<article class="tasca-page">
+  <header class="tasca-hero wrap">
+    <p class="kicker">
+      <a href="/cidades/{{ tasca.citySlug }}/">{{ tasca.city }}</a>
+      <span aria-hidden="true">/</span>
+      {{ tasca.neighborhood }}
+    </p>
+    <h1>{{ tasca.name }}</h1>
+    <p class="lead">{{ tasca.summary }}</p>
+    <p class="tasca-hero-meta">
+      <span class="price">{{ tasca.price }}</span>
+      {% for tag in tasca.tags %}
+        <span class="tag">{{ tag | tagLabel }}</span>
+      {% endfor %}
+    </p>
+  </header>
+
+  <div class="wrap tasca-layout">
+    <div class="tasca-copy">
+      {% for para in tasca.body | paragraphs %}
+        <p>{{ para }}</p>
+      {% endfor %}
+
+      <section class="order-block" aria-labelledby="pedir">
+        <h2 id="pedir">O que pedir</h2>
+        <ol>
+          {% for dish in tasca.order %}
+            <li>{{ dish }}</li>
+          {% endfor %}
+        </ol>
+      </section>
+    </div>
+
+    <aside class="practical" aria-labelledby="ficha">
+      <h2 id="ficha">Ficha</h2>
+      <dl>
+        <div>
+          <dt>Morada</dt>
+          <dd>
+            {{ tasca.address }}<br>
+            {{ tasca.postalCode }} {{ tasca.city }}<br>
+            <a href="{{ tasca | osmUrl }}" rel="noopener noreferrer">Ver no mapa</a>
+          </dd>
+        </div>
+        {% if tasca.phone %}
+        <div>
+          <dt>Telefone</dt>
+          <dd><a href="{{ tasca.phone | telHref }}">{{ tasca.phone }}</a></dd>
+        </div>
+        {% endif %}
+        <div>
+          <dt>Horário</dt>
+          <dd>{{ tasca.hours }}</dd>
+        </div>
+        <div>
+          <dt>Reservas</dt>
+          <dd>{{ tasca.reservations | reservationLabel }}</dd>
+        </div>
+        <div>
+          <dt>Pagamento</dt>
+          <dd>{{ tasca.payment | join(" · ") }}</dd>
+        </div>
+        {% if tasca.opened %}
+        <div>
+          <dt>Desde</dt>
+          <dd>{{ tasca.opened }}</dd>
+        </div>
+        {% endif %}
+        {% if tasca.website %}
+        <div>
+          <dt>Site</dt>
+          <dd>
+            <a href="{{ tasca.website }}" rel="noopener noreferrer">{{ tasca.website | displayUrl }}</a>
+          </dd>
+        </div>
+        {% endif %}
+      </dl>
+    </aside>
+  </div>
+
+  {% if related.length %}
+  <section class="related wrap" aria-labelledby="perto">
+    <h2 id="perto">Perto desta mesa</h2>
+    <div class="tasca-list">
+      {% for item in related %}
+        {% set tasca = item %}
+        {% include "partials/tasca-card.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</article>

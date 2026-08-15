@@ -1,0 +1,72 @@
+---
+layout: layouts/base.njk
+title: O que é uma tasca
+description: O que entra neste guia, como se reconhece uma tasca a sério, e como se usa a mesa.
+permalink: /sobre/
+---
+
+<article class="prose wrap">
+  <header class="page-head page-head-flush">
+    <p class="kicker">Método</p>
+    <h1>O que é uma tasca</h1>
+  </header>
+
+  <p class="lead">
+    Tasca, taberna, casa de pasto, adega. Os nomes mudam. A coisa é a mesma:
+    um sítio pequeno, muitas vezes de família, que serve comida portuguesa
+    do dia a quem vive ou trabalha ao lado.
+  </p>
+
+  <h2>O que entra neste guia</h2>
+  <p>
+    Entra a casa que ainda cozinha para o bairro. Pode ter fila. Pode ter
+    marcação. Pode ser contemporânea, como o Velho Eurico ou a Taberna da
+    Rua das Flores — desde que a sala não tenha virado cenário.
+  </p>
+  <p>
+    Não entra o restaurante com ementa fotografada na porta, anfitrião na rua
+    e carta em seis línguas. Não entra a «tasca gourmet» que só usa a palavra.
+    Não entra a casa que vive de reserva no TheFork e de prato para fotografia.
+  </p>
+
+  <h2>Como se reconhece</h2>
+  <ul>
+    <li>O quadro muda. A ementa laminada de 2019 não.</li>
+    <li>Ao almoço há portugueses. Se não houver, desconfia.</li>
+    <li>A conta vem no papel, muitas vezes à mão.</li>
+    <li>O dono está lá, a cozinhar ou a servir.</li>
+    <li>O vinho da casa custa pouco e chega.</li>
+  </ul>
+
+  <h2>À mesa</h2>
+  <p>
+    O prato do dia é o pedido inteligente: é o que a casa comprou de manhã,
+    a um preço que a carta da noite não replica. O couvert (pão, azeitonas,
+    queijo) recusa-se sem drama. Gorjeta: 5 a 10 por cento ao jantar, ou
+    arredondar. Dinheiro ainda ajuda, mesmo onde há MB.
+  </p>
+  <p>
+    Horários neste site são uma indicação, não um contrato. Tascas fecham
+    quando acaba o peixe, quando há um funeral, quando o dono vai ao médico.
+    Telefona, ou aparece cedo.
+  </p>
+
+  <h2>Preços</h2>
+  <ul class="plain">
+    {% for item in site.priceLegend %}
+      <li><strong>{{ item.symbol }}</strong> — {{ item.label }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>A lista</h2>
+  <p>
+    Este guia começa com um núcleo de casas conhecidas — Lisboa, Porto,
+    Coimbra, Almada — para haver sítio onde pôr o resto. A ficha de cada tasca vive
+    num ficheiro de dados. Quando a lista completa chegar, entra toda:
+    morada, bairro, o que pedir, se há fila.
+  </p>
+  <p>
+    Erros de horário, casas que fecharam, casas que faltam: o guia corrige-se
+    à medida. Uma tasca morta não se disfarça de aberta.
+  </p>
+</article>

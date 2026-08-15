@@ -1,0 +1,15 @@
+<article class="tasca-row" data-name="{{ tasca.name }}" data-city="{{ tasca.citySlug }}" data-neighborhood="{{ tasca.neighborhood }}" data-price="{{ tasca.price }}" data-tags="{{ tasca.tags | join(' ') }}">
+  <a class="tasca-row-link" href="/tascas/{{ tasca.slug }}/">
+    <div class="tasca-row-top">
+      <h3 class="tasca-name">{{ tasca.name }}</h3>
+      <p class="tasca-meta">
+        <span>{{ tasca.neighborhood }}</span>
+        <span aria-hidden="true">·</span>
+        <span>{{ tasca.city }}</span>
+        <span aria-hidden="true">·</span>
+        <span class="price">{{ tasca.price }}</span>
+      </p>
+    </div>
+    <p class="tasca-summary">{{ tasca.summary }}</p>
+  </a>
+</article>
