@@ -20,11 +20,11 @@ A pasta `_site/` é o website estático, pronto para qualquer hospedagem.
 ## GitHub Pages
 
 O workflow em `.github/workflows/pages.yml` constrói o site e publica-o em
-`https://<utilizador>.github.io/tascas/` quando o código está no ramo `main`.
+`https://<utilizador>.github.io/guia-tascas/` quando o código está no ramo `main`.
 
-É preciso um repositório público chamado `tascas` e Pages com fonte
-**GitHub Actions**. Sem um token GitHub, o agente não consegue criar o
-repositório por ti.
+O repositório chama-se `guia-tascas` (não `tascas`) para o prefixo do GitHub
+Pages não colidir com a rota `/tascas/`. Pages tem de usar fonte
+**GitHub Actions**. Sem um token GitHub, o agente não cria o repositório sozinho.
 
 ## Acrescentar tascas
 
