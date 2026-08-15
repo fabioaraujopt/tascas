@@ -157,6 +157,15 @@ export default async function (eleventyConfig) {
     new Date(value).toISOString().slice(0, 10),
   );
 
+  eleventyConfig.addFilter("withBase", (path) => {
+    const prefix = normalizePathPrefix(process.env.PATH_PREFIX);
+    if (!path) return prefix === "/" ? "/" : prefix;
+    if (path.startsWith("#") || /^[a-z]+:/i.test(path)) return path;
+    const p = path.startsWith("/") ? path : `/${path}`;
+    if (prefix === "/") return p;
+    return `${prefix.replace(/\/$/, "")}${p}`;
+  });
+
   eleventyConfig.addShortcode("year", () => String(new Date().getFullYear()));
 
   eleventyConfig.addGlobalData("tascaCount", tascas.length);

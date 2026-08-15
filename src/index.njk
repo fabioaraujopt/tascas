@@ -12,8 +12,8 @@ permalink: /
     as que ainda cozinham para o bairro, não para o algoritmo.
   </p>
   <p class="hero-actions">
-    <a class="btn" href="{{ '/tascas/' | url }}">Ver as {{ tascaCount }} tascas</a>
-    <a class="text-link" href="{{ '/sobre/' | url }}">O que entra no guia</a>
+    <a class="btn" href="{{ '/tascas/' | withBase }}">Ver as {{ tascaCount }} tascas</a>
+    <a class="text-link" href="{{ '/sobre/' | withBase }}">O que entra no guia</a>
   </p>
 </section>
 
@@ -36,7 +36,7 @@ permalink: /
   <ul class="city-index">
     {% for city in cities %}
       <li>
-        <a href="{{ ('/cidades/' + city.slug + '/') | url }}">
+        <a href="{{ ('/cidades/' + city.slug + '/') | withBase }}">
           <span class="city-name">{{ city.name }}</span>
           <span class="city-count">{{ city.count }} {{ "casa" if city.count == 1 else "casas" }}</span>
         </a>
@@ -53,5 +53,5 @@ permalink: /
     <li>O couvert não é obrigatório. «Não, obrigado» resolve.</li>
     <li>Horários neste guia são uma indicação. A porta é a fonte.</li>
   </ol>
-  <p><a class="text-link" href="{{ '/sobre/' | url }}">Ler o método completo</a></p>
+  <p><a class="text-link" href="{{ '/sobre/' | withBase }}">Ler o método completo</a></p>
 </section>

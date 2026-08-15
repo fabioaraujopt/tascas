@@ -9,7 +9,7 @@ eleventyComputed:
 <article class="tasca-page">
   <header class="tasca-hero wrap">
     <p class="kicker">
-      <a href="{{ ('/cidades/' + tasca.citySlug + '/') | url }}">{{ tasca.city }}</a>
+      <a href="{{ ('/cidades/' + tasca.citySlug + '/') | withBase }}">{{ tasca.city }}</a>
       <span aria-hidden="true">/</span>
       {{ tasca.neighborhood }}
     </p>

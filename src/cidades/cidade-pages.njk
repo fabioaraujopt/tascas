@@ -12,7 +12,7 @@ eleventyComputed:
 {% set list = tascas | tascasByCity(city.slug) | sortByName %}
 
 <section class="page-head wrap">
-  <p class="kicker"><a href="{{ '/cidades/' | url }}">Cidades</a></p>
+  <p class="kicker"><a href="{{ '/cidades/' | withBase }}">Cidades</a></p>
   <h1>{{ city.name }}</h1>
   <p class="lead">
     {{ city.count }} {{ "casa" if city.count == 1 else "casas" }}.

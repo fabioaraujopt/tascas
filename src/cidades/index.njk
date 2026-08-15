@@ -17,7 +17,7 @@ permalink: /cidades/
 <ul class="city-index wrap">
   {% for city in cities %}
     <li>
-      <a href="{{ ('/cidades/' + city.slug + '/') | url }}">
+      <a href="{{ ('/cidades/' + city.slug + '/') | withBase }}">
         <span class="city-name">{{ city.name }}</span>
         <span class="city-count">{{ city.count }} {{ "casa" if city.count == 1 else "casas" }} · {{ city.neighborhoods | join(", ") }}</span>
       </a>
